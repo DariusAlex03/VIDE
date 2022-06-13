@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Panier</title>
+    <style>
+        #parfums span
+        {
+            padding: .5em;
+            margin: 1em;
+            border: 1px solid blue;
+            background: white;
+
+        }
+        #parfums span:hover
+        {
+            background: linear-gradient(to top right, white 50%, cyan 75%);
+        }
+    </style>
+</head>
+<body>
+
+
+<p id="parfums"><span>Fraise</span><span>Chocolat</span><span>Vanille</span><span>Framboise</span></p>
+<h4>Panier:</h4>
+<ul id="panier">
+
+</ul>
+
+<script>
+    let j = document.querySelectorAll("#parfums span");
+    for(let s of j) {
+        s.addEventListener("click", function (event) {
+            let lij = document.createElement("li");
+            let uls = document.querySelector("ul")
+            lij.textContent = s.textContent;
+            uls.append(lij);
+            console.log(spj)
+        });
+    }
+</script>
+</body>
+</html>

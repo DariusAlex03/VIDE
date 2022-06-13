@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Vide</title>
+		<style>
+			.erreur{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<form method="POST">
+			<p>
+				<label>Nom : <input id="nom" type="text"/></label> 
+				<span class="erreur" id="erreur-nom">Vide !</span>
+			</p>
+			<p>
+				<label>Prénom : <input id="prenom" type="text"/></label> 
+			</p>
+		</form>
+		<p>Bonjour <span id="affiche-prenom"></span> <span id="affiche-nom"></span>!</p>
+		<script>
+			let inputNom=document.querySelector('#nom');
+            inputNom.addEventListener('keyup',touche_nom_relachee);
+			let inputPrenom=document.querySelector('#prenom');
+            inputPrenom.addEventListener('keyup',touche_prenom_relachee);
+			function touche_nom_relachee(event) 
+			{
+               console.log('Touche nom relâchée');
+			   let afficheNom=document.querySelector('#affiche-nom');
+			   afficheNom.textContent=inputNom.value;
+			   
+			   let cache=document.querySelector('#erreur-nom');
+               cache.style.opacity=0;
+               
+               let i = inputNom.value.length;
+               console.log(i);
+               if(i==0){
+               cache.style.opacity=1;
+               }
+			}
+			function touche_prenom_relachee(event) 
+			{
+               console.log('Touche prénom relâchée');
+			   let affichePrenom=document.querySelector('#affiche-prenom');
+			   affichePrenom.textContent=inputPrenom.value;
+			}
+		</script>
+	</body>
+</html>

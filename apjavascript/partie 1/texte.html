@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Texte</title>
+	</head>
+	<body>
+		<form method="POST">
+			<p>
+				<label>Nom : <input id="nom" type="text"/></label> 
+			</p>
+		</form>
+		<p>Bonjour <span id="affiche-nom"></span>!</p>
+		<script>
+            let inputNom = document.querySelector('#nom');
+            inputNom.addEventListener('keyup', touche_nom_relachee);
+			function touche_nom_relachee(event) 
+			{
+               console.log('Touche nom relâchée');
+               let j = inputNom.value;
+               let f = document.querySelector('#affiche-nom');
+               f.textContent=j;
+			}
+		</script>
+	</body>
+</html>

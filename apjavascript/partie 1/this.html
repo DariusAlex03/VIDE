@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+let parfums=document.querySelectorAll('#parfums span');
+for(let i=0;i<parfums.length;i++)
+{
+parfums[i].addEventListener('click',function(){
+console.log(this);
+let ligne=document.createElement('li');
+ligne.textContent=this.textContent;
+let panier=document.getElementById('panier');
+panier.append(ligne);
+    let a = document.getElementById("moyen").addEventListener("click", afficher());
+});
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+body
+{
+	background-image: url(texture-grise.jpg);
+}
+
+#onglets-menu
+{
+	list-style: none;
+    display: flex;
+    box-shadow: (0, 0, 0, .2);
+}
+
+#onglets-menu li 
+{
+    background: linear-gradient(220deg, transparent 10px, #ad1c1c 11px);
+    color: white;
+    padding: 11px 30px;
+    font-family: 'Lucida sans', Arial, Helvetica;
+    font-size: 12px;
+    text-shadow: 12px;
+}

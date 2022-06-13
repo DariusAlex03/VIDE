@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Pingouin</title>
+		<style>
+			.splat
+			{
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="https://moodle.iutv.univ-paris13.fr/img/bjs/tux.png" alt="tux"/>
+		<script>
+			document.addEventListener('click',ajouter_splat);
+			function ajouter_splat(e) 
+			{
+			  let i=document.createElement('img');
+			  i.src='https://moodle.iutv.univ-paris13.fr/img/bjs/splat.png';
+			  document.body.append(i);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+body
+{
+	background-image: url(texture-grise.jpg);
+}
+
+#onglets-menu
+{
+	list-style: none;
+   display: flex;
+}
+
+#onglets-menu li
+{
+	background: linear-gradient(220deg, transparent 10px, #ad1c1c 11px);
+	color: white;
+	padding: 11px 30px;
+	font-family: 'Lucida sans', Arial, Helvetica;
+	font-weight: bold;
+	font-size: 12px;
+	text-shadow: 0 1px 0 rgba(0,0,0,.5);
+	box-shadow: -4px 0 0 rgba(0, 0, 0, .2);
+}
+
+#onglets-menu li:hover
+{
+	background: linear-gradient(220deg, transparent 10px, #c93434 11px);
+}
+
+#onglets-menu .menu-actif
+{
+	background: linear-gradient(220deg, transparent 10px, white 11px);
+	color: #333;
+	text-shadow: none;
+}
+
+/* Forcer à rester blanc quand la souris passe sur le menu actif */
+#onglets-menu .menu-actif:hover
+{
+	background: linear-gradient(220deg, transparent 10px, white 11px);
+}

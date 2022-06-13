@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Jeu</title>
+        <style>
+            table {
+    			
+    			border-collapse: collapse;
+			}
+			
+			td {
+				border: 1px solid black;
+				width: 50px;
+				height: 50px;
+				text-align: center;
+			}
+
+			td:hover{
+				background-color: #ffa;
+			}
+        </style>
+    </head>
+    <body>
+        <table>
+    
+   			 <tbody>
+        		<tr>
+            		<td></td>
+           			<td></td>
+            		<td></td>
+        		</tr>
+        		
+        		<tr>
+        			<td></td>
+        			<td></td>
+        			<td></td>
+        		</tr>
+        		
+        		<tr>
+        			<td></td>
+        			<td></td>
+        			<td></td>
+        		</tr>
+        		
+    		</tbody>
+		</table>
+
+        <script>
+          let tds=document.querySelectorAll('td');
+            for(let i=0;i<tds.length;i++)
+			{
+			  tds[i].addEventListener('click',function (event) 
+			{
+               console.log('Click');
+			   if(this.textContent===''){
+			   this.textContent=joueur;
+               if(joueur==='X'){
+               	joueur='O';}
+               else{
+               joueur='X';}
+               
+               }
+               else{
+               console.log('erreur');
+               }
+			});
+			}
+            let joueur='X';
+			
+
+
+        </script>
+    </body>
+</html>
+

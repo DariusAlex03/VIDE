@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <title>Texte</title>
+    <style>
+        .erreur{
+            color: red;
+            transition: opacity .3s;
+        }
+    </style>
+</head>
+<body>
+<form method="POST">
+    <p>
+        <label>Nom : <input id="nom" type="text"/></label>
+        <span class="erreur" id="erreur-nom">Non Vide !</span>
+    </p>
+    <p>
+        <label>Login : <input id="login" type="text"/></label>
+        <span class="erreur" id="erreur-login">Vide !</span>
+    </p>
+
+    <p>
+        <label>Email : <input id="mail" type="email"></label>
+        <span class="erreur"  id="erreur-mail"> Non Valide ! </span>
+    </p>
+
+    <p>
+        <label>Mot de passe : <input id="pass" type="password"></label>
+        <span class="erreur" id="erreur-pass">Trop court</span>
+    </p>
+
+    <p>
+        <label>Confirmation : <input id="confi" type="password"></label>
+        <span class="erreur" id="erreur-confi"> Different</span>
+    </p>
+
+    <input type="submit" value="Envoyer">
+</form>
+<p>Bonjour <span id="affiche-prenom"></span> <span id="affiche-nom"></span>!</p>
+<script src="formulaire.js">
+
+</script>
+</body>
+</html>

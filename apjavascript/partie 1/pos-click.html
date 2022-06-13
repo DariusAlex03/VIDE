@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Pos click</title>
+  </head>
+  <body>
+    <p>
+      Bonjour!
+    </p>
+    <script>
+      document.addEventListener('mouseup',fonction_a_appeler);
+      function fonction_a_appeler()
+      {
+        console.log('coucou');
+      }
+      document.addEventListener('mousedown', fonction_a_reappeler);
+      function fonction_a_reappeler(event)
+      {
+      	let i= document.querySelector('p');
+      	i.textContent=event.pageX,event.pageY;
+      	console.log(event.pageX,event.pageY);
+      }
+      let j=document.createElement('img');
+      j.src="https://moodle.iutv.univ-paris13.fr/img/bjs/tux.png";
+      document.body.append(j)
+    </script>
+  </body>
+</html>
